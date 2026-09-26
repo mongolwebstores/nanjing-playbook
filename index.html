@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Nanjing Semester Playbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f4f7f7; --surface:#ffffff; --ink:#16222a; --muted:#5b6b73; --line:#dce4e6; --accent:#12807e; --accent-ink:#ffffff;
+  --class-bg:#dfe7f4; --class-fg:#2b4a7e;
+  --study-bg:#e7e1f6; --study-fg:#4b3a8c;
+  --biz-bg:#d8f0e3; --biz-fg:#1d6b45;
+  --trade-bg:#fbecc9; --trade-fg:#855700;
+  --gym-bg:#f8dcdc; --gym-fg:#962828;
+  --run-bg:#fde2cf; --run-fg:#94460f;
+  --meal-bg:#edf0f1; --meal-fg:#55626a;
+  --rest-bg:#f2f4f5; --rest-fg:#6a767c;
+  --ai-bg:#f5def0; --ai-fg:#86286f;
+  --warn-bg:#fff4dc; --warn-fg:#7a5200; --warn-line:#f0d38c;
+  --display:"Bricolage Grotesque","IBM Plex Sans",system-ui,sans-serif;
+  --body:"IBM Plex Sans","Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0e1518; --surface:#162025; --ink:#e2eaec; --muted:#93a3aa; --line:#27353b; --accent:#4cbfbb; --accent-ink:#06201f;
+    --class-bg:#1f2c45; --class-fg:#aac2ee;
+    --study-bg:#2a2443; --study-fg:#c8b9f4;
+    --biz-bg:#16342a; --biz-fg:#8fd9b2;
+    --trade-bg:#3a2d10; --trade-fg:#efc76f;
+    --gym-bg:#3d1c1d; --gym-fg:#f0a4a4;
+    --run-bg:#3d2615; --run-fg:#f3b488;
+    --meal-bg:#1c262a; --meal-fg:#a9b5ba;
+    --rest-bg:#192226; --rest-fg:#8e9aa0;
+    --ai-bg:#3a1c34; --ai-fg:#eeb0dc;
+    --warn-bg:#2f2610; --warn-fg:#efcf85; --warn-line:#5a4717;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0e1518; --surface:#162025; --ink:#e2eaec; --muted:#93a3aa; --line:#27353b; --accent:#4cbfbb; --accent-ink:#06201f;
+  --class-bg:#1f2c45; --class-fg:#aac2ee;
+  --study-bg:#2a2443; --study-fg:#c8b9f4;
+  --biz-bg:#16342a; --biz-fg:#8fd9b2;
+  --trade-bg:#3a2d10; --trade-fg:#efc76f;
+  --gym-bg:#3d1c1d; --gym-fg:#f0a4a4;
+  --run-bg:#3d2615; --run-fg:#f3b488;
+  --meal-bg:#1c262a; --meal-fg:#a9b5ba;
+  --rest-bg:#192226; --rest-fg:#8e9aa0;
+  --ai-bg:#3a1c34; --ai-fg:#eeb0dc;
+  --warn-bg:#2f2610; --warn-fg:#efcf85; --warn-line:#5a4717;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--body);padding-inline:16px;padding-block:24px 64px}
+.wrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(28px,6vw,44px);font-weight:700;letter-spacing:-.01em}
+h2{font-size:24px;font-weight:700}
+h3{font-size:17px;font-weight:600;font-family:var(--body)}
+p{margin:0;max-width:65ch}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+section{display:flex;flex-direction:column;gap:16px}
+.sec-head{display:flex;flex-direction:column;gap:6px}
+
+/* header */
+header{display:flex;flex-direction:column;gap:14px}
+.meta{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:13px}
+.chip b{font-weight:600}
+
+/* legend */
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:12px;height:12px;border-radius:3px;display:inline-block}
+
+/* tabs */
+.tabs{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px}
+.tab{appearance:none;border:0;background:transparent;color:var(--muted);font:600 14px/1 var(--body);padding:10px 0 8px;border-radius:9px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px}
+.tab small{font:400 11px/1 var(--mono)}
+.tab[aria-selected="true"]{background:var(--accent);color:var(--accent-ink)}
+.tab:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* day timeline */
+.day{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.day-note{padding:12px 16px;border-bottom:1px solid var(--line);font-size:14px;color:var(--muted)}
+.row{display:grid;grid-template-columns:92px 1fr;gap:12px;padding:10px 16px;border-bottom:1px solid var(--line);align-items:start}
+.row:last-child{border-bottom:0}
+.row .t{font:500 13px/1.5 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums;padding-top:2px}
+.blk{border-radius:8px;padding:8px 10px;display:flex;flex-direction:column;gap:2px}
+.blk .ti{font-weight:600;font-size:14.5px}
+.blk .zh{font-weight:500;margin-left:8px;opacity:.8}
+.blk .de{font-size:13.5px;opacity:.92}
+.row.now .t{color:var(--accent);font-weight:600}
+.row.now .blk{outline:2px solid var(--accent);outline-offset:1px}
+.nowtag{font:600 10px/1 var(--mono);letter-spacing:.06em;background:var(--accent);color:var(--accent-ink);padding:3px 5px;border-radius:4px;margin-left:6px;vertical-align:2px}
+.c-class{background:var(--class-bg);color:var(--class-fg)}
+.c-study{background:var(--study-bg);color:var(--study-fg)}
+.c-biz{background:var(--biz-bg);color:var(--biz-fg)}
+.c-trade{background:var(--trade-bg);color:var(--trade-fg)}
+.c-gym{background:var(--gym-bg);color:var(--gym-fg)}
+.c-run{background:var(--run-bg);color:var(--run-fg)}
+.c-meal{background:var(--meal-bg);color:var(--meal-fg)}
+.c-rest{background:var(--rest-bg);color:var(--rest-fg)}
+.c-ai{background:var(--ai-bg);color:var(--ai-fg)}
+
+/* week grid */
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.week{display:grid;grid-template-columns:48px repeat(7,minmax(92px,1fr));min-width:720px;position:relative;padding:8px 8px 8px 0}
+.wk-head{position:sticky;top:0;font:600 12px/1.2 var(--body);text-align:center;padding:4px 0 8px;color:var(--ink)}
+.wk-head small{display:block;font:400 11px/1.3 var(--mono);color:var(--muted)}
+.wk-col{position:relative;border-left:1px solid var(--line)}
+.wk-times{position:relative}
+.wk-times span{position:absolute;right:6px;font:400 10.5px/1 var(--mono);color:var(--muted);transform:translateY(-50%)}
+.wk-line{position:absolute;left:0;right:0;border-top:1px dashed var(--line)}
+.wb{position:absolute;left:3px;right:3px;border-radius:5px;padding:2px 5px;font-size:10.5px;line-height:1.25;overflow:hidden;font-weight:600}
+.wb .zh{display:block;font-weight:500;opacity:.85}
+.wb.today{box-shadow:inset 0 0 0 1.5px var(--accent)}
+
+/* goals */
+.goals{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media (max-width:860px){.goals{grid-template-columns:1fr}}
+.goal{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:12px;border-top:4px solid var(--g)}
+.goal.money{--g:var(--biz-fg)} .goal.gpa{--g:var(--class-fg)} .goal.body{--g:var(--gym-fg)}
+.goal .gl{font:500 11.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--g)}
+.goal .big{font:700 clamp(30px,5vw,40px)/1 var(--display);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.goal .big small{font:500 14px/1 var(--body);color:var(--muted);letter-spacing:0;margin-left:6px}
+.goal .sub{font-size:13.5px;color:var(--muted)}
+.ladder{list-style:none;padding:0;margin:0;display:flex;flex-direction:column}
+.ladder li{display:grid;grid-template-columns:66px 1fr;gap:10px;padding:7px 0;border-top:1px solid var(--line);font-size:13.5px;max-width:none}
+.ladder li .d{font:500 12px/1.5 var(--mono);color:var(--muted)}
+.ladder li.next{background:color-mix(in srgb,var(--g) 10%,transparent);margin:0 -8px;padding-inline:8px;border-radius:6px;border-top-color:transparent}
+.ladder li.next .d{color:var(--g);font-weight:600}
+.ladder li.past{opacity:.55}
+.goal .moves{font-size:13px;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px}
+.goal .moves b{color:var(--ink);font-variant-numeric:tabular-nums}
+.countdown{font:600 12px/1 var(--mono);color:var(--g)}
+.calc{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:20px}
+@media (max-width:760px){.calc{grid-template-columns:1fr}}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.field{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted)}
+.field input{font:500 16px/1 var(--mono);padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+.out{display:flex;flex-direction:column;gap:10px}
+.outrow{display:flex;justify-content:space-between;gap:12px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:8px;font-size:14px}
+.outrow .v{font:700 20px/1 var(--display);font-variant-numeric:tabular-nums;text-align:right}
+.outrow.key .v{color:var(--biz-fg);font-size:26px}
+.today-goals{display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.tg{display:inline-flex;gap:6px;align-items:center;font-size:13px;padding:4px 10px;border-radius:999px}
+.tg b{font-variant-numeric:tabular-nums}
+.gtag{font:600 10px/1 var(--mono);letter-spacing:.05em;text-transform:uppercase;padding:3px 6px;border-radius:4px;margin-left:8px;vertical-align:2px;border:1px solid currentColor;opacity:.75}
+/* budget */
+.budget{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.bud{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.bud .n{font:700 24px/1 var(--display);font-variant-numeric:tabular-nums}
+.bud .l{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:6px}
+
+/* details */
+details{background:var(--surface);border:1px solid var(--line);border-radius:14px}
+summary{cursor:pointer;list-style:none;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary h2{font-size:20px}
+summary .hint{font-size:13px;color:var(--muted);white-space:nowrap}
+summary::after{content:"+";font:500 22px/1 var(--mono);color:var(--accent)}
+details[open] summary::after{content:"−"}
+.dbody{padding:0 18px 18px;display:flex;flex-direction:column;gap:14px}
+
+.courses{display:flex;flex-direction:column;gap:10px}
+.course{display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px;border:1px solid var(--line);border-radius:10px}
+.rank{font:700 18px/1 var(--display);color:var(--accent);padding-top:2px}
+.course .cn{font-size:13px;color:var(--muted)}
+ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+li{max-width:70ch}
+.note{background:var(--warn-bg);color:var(--warn-fg);border:1px solid var(--warn-line);border-radius:10px;padding:10px 12px;font-size:14px}
+.months{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.month{border:1px solid var(--line);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.month .mh{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.gate{border:1.5px solid var(--accent);border-radius:10px;padding:10px 12px;font-size:14px}
+
+.checks{display:flex;flex-direction:column;gap:2px}
+.check{display:flex;gap:10px;align-items:flex-start;padding:7px 4px;border-radius:6px;cursor:pointer}
+.check input{margin-top:4px;accent-color:var(--accent);width:16px;height:16px;flex:none}
+.check.done span{color:var(--muted);text-decoration:line-through}
+.cgroup{font:500 11.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:12px 4px 4px}
+.btn{appearance:none;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:500 13px/1 var(--body);padding:8px 12px;border-radius:8px;cursor:pointer;align-self:flex-start}
+.targets{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.target{border:1px solid var(--line);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:8px}
+
+pre{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px;overflow-x:auto;font:12.5px/1.55 var(--mono);white-space:pre-wrap;word-break:break-word}
+.row2{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+@media (max-width:520px){
+  .row{grid-template-columns:74px 1fr;gap:10px;padding:10px 12px}
+  .row .t{font-size:12px}
+  .tab{font-size:13px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Fall semester 2026–27 · Nanjing</span>
+    <h1>Nanjing Semester Playbook</h1>
+    <p class="muted">Three goals by September 2027: $10,000 a month, a 3.7+ GPA, and a strong, lean body. The week that gets you there is right below, built around your fixed timetable: classes first, then study, business, trading, AI teaching, gym and track. Sleep 23:00 → 06:45, every day.</p>
+    <div class="meta">
+      <span class="chip">Today <b class="mono" id="today-label">—</b></span>
+      <span class="chip"><b class="mono" id="week-label">—</b></span>
+      <span class="chip">No class before <b class="mono">09:50</b>. The mornings are yours</span>
+    </div>
+  </header>
+
+  <section aria-labelledby="day-h">
+    <div class="sec-head">
+      <span class="eyebrow">Daily view</span>
+      <h2 id="day-h">What to do, block by block</h2>
+    </div>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="day" id="day"></div>
+    <div class="legend" id="legend"></div>
+  </section>
+
+  <section aria-labelledby="week-h">
+    <div class="sec-head">
+      <span class="eyebrow">Week overview</span>
+      <h2 id="week-h">The whole week at a glance</h2>
+      <p class="muted">Scroll sideways on a phone. Today's column is outlined.</p>
+    </div>
+    <div class="scroll"><div class="week" id="week"></div></div>
+  </section>
+
+
+  <section aria-labelledby="goals-h">
+    <div class="sec-head">
+      <span class="eyebrow">The three goals · by September 2027</span>
+      <h2 id="goals-h">What every block on this page is for</h2>
+      <p class="muted">One number per goal, with a dated checkpoint every quarter. The highlighted row is your next checkpoint. Every block in the schedule above is tagged with the goal it moves.</p>
+    </div>
+    <div class="goals">
+      <article class="goal money">
+        <span class="gl">Goal 1 · Money</span>
+        <span class="big">$10,000<small>/month profit</small></span>
+        <span class="sub">Take-home profit after ads, stock and delivery, not revenue. AI teaching pays a fixed $200/month, so about $9,800 has to come from e-commerce. That makes the store the engine. Trading earns $0 in year one; it's a skill you build, not income.</span>
+        <ol class="ladder">
+          <li data-date="2026-12-31"><span class="d">Dec 2026</span><span>$2,000/mo profit. One product whose ads pay back, and 1+1 bundles on every product.</span></li>
+          <li data-date="2027-03-31"><span class="d">Mar 2027</span><span>$5,000/mo. A refill offer so miswak buyers reorder. Someone in UB handles packing and replies.</span></li>
+          <li data-date="2027-06-30"><span class="d">Jun 2027</span><span>$7,500/mo. A second product line or store at the same profit per order.</span></li>
+          <li data-date="2027-09-30"><span class="d">Sep 2027</span><span><b>$10,000/mo.</b> Two strong months in a row, not one lucky spike.</span></li>
+        </ol>
+        <div class="moves">Moved by: Business <b id="h-biz"></b> + AI teaching <b id="h-ai"></b> + Trading practice <b id="h-trade"></b> a week</div>
+      </article>
+      <article class="goal gpa">
+        <span class="gl">Goal 2 · GPA</span>
+        <span class="big">3.7+<small>/4.0 GPA</small></span>
+        <span class="sub">About 90+ average score in every course, and top 5 in the international class. Advanced Math decides it, so it gets the most hours.</span>
+        <ol class="ladder">
+          <li data-date="2026-11-15"><span class="d">Mid-Nov</span><span>Midterms 90+ in every course. No homework missed, no class skipped.</span></li>
+          <li data-date="2027-01-20"><span class="d">Jan 2027</span><span>Semester 1 GPA 3.7+. Every past paper done before finals.</span></li>
+          <li data-date="2027-06-30"><span class="d">Jun 2027</span><span>Semester 2 GPA 3.7+. HSK one level higher than in September.</span></li>
+          <li data-date="2027-09-30"><span class="d">Sep 2027</span><span><b>Year-one GPA 3.7+.</b> Top 5 in the class, and a scholarship application submitted.</span></li>
+        </ol>
+        <div class="moves">Moved by: Classes <b id="h-class"></b> + Self-study <b id="h-study"></b> a week</div>
+      </article>
+      <article class="goal body">
+        <span class="gl">Goal 3 · Body</span>
+        <span class="big">Strong + lean</span>
+        <span class="sub">Bench press = 1× your bodyweight, squat = 1.5×, deadlift = 2×. Abs visible (about 12–15% body fat). 5 km in under 24 minutes.</span>
+        <ol class="ladder">
+          <li data-date="2026-12-31"><span class="d">Dec 2026</span><span>50 gym sessions logged. Bench 0.75× bodyweight. Protein at every meal.</span></li>
+          <li data-date="2027-03-31"><span class="d">Mar 2027</span><span>Squat 1.25× bodyweight. 5 km under 27:00.</span></li>
+          <li data-date="2027-06-30"><span class="d">Jun 2027</span><span>Deadlift 1.75× bodyweight. Waist measurement down 4 cm from October.</span></li>
+          <li data-date="2027-09-30"><span class="d">Sep 2027</span><span><b>Bench 1×, squat 1.5×, deadlift 2× bodyweight. Abs visible. 5 km under 24:00.</b></span></li>
+        </ol>
+        <div class="moves">Moved by: Gym <b id="h-gym"></b> + Track <b id="h-run"></b> + PE tennis a week</div>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="calc-h">
+    <div class="sec-head">
+      <span class="eyebrow">The money math</span>
+      <h2 id="calc-h">What $10,000 a month takes</h2>
+      <p class="muted">Enter your real numbers. The calculator shows how many orders a day you need and how long it takes at your growth rate. Your inputs are saved on this device only.</p>
+    </div>
+    <div class="calc">
+      <div class="fields">
+        <label class="field" for="c-goal">Monthly profit goal ($)<input id="c-goal" type="number" inputmode="decimal" min="0" value="10000"></label>
+        <label class="field" for="c-teach">AI teaching pay ($/mo)<input id="c-teach" type="number" inputmode="decimal" min="0" value="200"></label>
+        <label class="field" for="c-ppo">Profit per order ($)<input id="c-ppo" type="number" inputmode="decimal" min="0.5" step="0.5" value="8"></label>
+        <label class="field" for="c-now">Orders per day now<input id="c-now" type="number" inputmode="decimal" min="0" step="0.5" placeholder="e.g. 6"></label>
+        <label class="field" for="c-growth">Monthly growth (%)<input id="c-growth" type="number" inputmode="decimal" min="1" max="100" value="15"></label>
+      </div>
+      <div class="out" id="calc-out"></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="bud-h">
+    <div class="sec-head">
+      <span class="eyebrow">Weekly hours</span>
+      <h2 id="bud-h">Where the week goes</h2>
+      <p class="muted">Added up from the schedule above. Self-study at or above class hours is the habit behind a top GPA.</p>
+    </div>
+    <div class="budget" id="budget"></div>
+  </section>
+
+  <details open id="d-gpa">
+    <summary><h2>GPA strategy</h2><span class="hint">hardest course first</span></summary>
+    <div class="dbody">
+      <div class="courses">
+        <div class="course"><span class="rank">1</span><div>
+          <h3>Advanced Math I <span class="cn">高等数学I(国际班) · Thu + Fri 3–5节 · 教三-205</span></h3>
+          <ul>
+            <li>Solve problems in Deep study 1 every weekday morning. Finish homework on the day it's assigned.</li>
+            <li>Keep a mistake notebook. On Friday at 16:00, redo every problem you got wrong that week.</li>
+            <li>For intuition, watch 3Blue1Brown (Essence of Calculus) or Khan Academy in English.</li>
+            <li>Go to office hours or TA sessions once a week, even when you aren't stuck.</li>
+          </ul></div></div>
+        <div class="course"><span class="rank">2</span><div>
+          <h3>Management <span class="cn">管理学（全英文）· Tue 8–10节 · 教二-501</span></h3>
+          <ul>
+            <li>On Tuesday at 14:30, read the chapter and write a one-page summary before class.</li>
+            <li>Ask at least one question in every class. Participation grades are easy points in an English-taught course.</li>
+          </ul></div></div>
+        <div class="course"><span class="rank">3</span><div>
+          <h3>Chinese I: Integrated, Reading, Listening <span class="cn">汉语综合 · 汉语阅读 · 汉语听力</span></h3>
+          <ul>
+            <li>Do 20 minutes of Anki flashcards every day inside Deep study 1, with that week's textbook vocabulary.</li>
+            <li>Spend 10 minutes shadowing listening audio (repeating it aloud) on the walk to class.</li>
+            <li>Have one conversation a week fully in Chinese with a local classmate.</li>
+            <li>Target: one HSK level higher by the end of the semester.</li>
+          </ul></div></div>
+        <div class="course"><span class="rank">4</span><div>
+          <h3>Survey of China · Intro to AI <span class="cn">中国概况（英本班）· 人工智能通识导论</span></h3>
+          <ul>
+            <li>Attend every class, take notes, and submit assignments two days before the deadline. Treat these as dependable A's.</li>
+          </ul></div></div>
+        <div class="course"><span class="rank">5</span><div>
+          <h3>PE: Tennis <span class="cn">体育I · Fri 6–7节 · 梅园网球场</span></h3>
+          <ul><li>Attend every session. Find out what the skill test is in week 2 and practise it.</li></ul>
+        </div></div>
+      </div>
+      <h3>Rules</h3>
+      <ul>
+        <li>Never skip a class. Sit in the first three rows.</li>
+        <li>This week, find out each course's grading split: attendance, homework, midterm, final.</li>
+        <li><b>Exam mode</b> starts 3 weeks before finals (about mid-December). Business drops to 30 minutes of ops a day, trading to 15 minutes of review, and gym to 3 sessions a week. All the freed time goes to past papers.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details id="d-trade">
+    <summary><h2>Trading: 90-day learning path</h2><span class="hint">learning only, no real money yet</span></summary>
+    <div class="dbody">
+      <p class="note">This is a learning plan, not financial advice. Mainland China bans crypto exchanges and crypto trading services, so don't trade crypto while you're in China. Your student residence permit also comes with conditions. Check with the international office before you trade anything with real money.</p>
+      <div class="months">
+        <div class="month"><div class="mh"><h3>Month 1 · Foundations</h3><span class="mono muted">Oct</span></div>
+          <ul>
+            <li>Work through Babypips "School of Pipsology" (free).</li>
+            <li>Learn candlesticks, support and resistance, trend and market structure.</li>
+            <li>Learn position sizing and the 1% risk rule: never risk more than 1% of the account on a single trade.</li>
+            <li>Read <i>Trading in the Zone</i> by Mark Douglas.</li>
+            <li>Set up a free TradingView account.</li>
+          </ul></div>
+        <div class="month"><div class="mh"><h3>Month 2 · Choose one market</h3><span class="mono muted">Nov</span></div>
+          <ul>
+            <li>Compare forex/gold with stocks, and choose the one whose active hours fit your 21:30–22:15 slot. The US market opens at 21:30 Beijing time (22:30 from November).</li>
+            <li>Choose one simple strategy and stick with it.</li>
+            <li>Start paper trading and journal every trade: setup, entry, stop, target, result, emotion.</li>
+          </ul></div>
+        <div class="month"><div class="mh"><h3>Month 3 · Proof</h3><span class="mono muted">Dec–Jan</span></div>
+          <ul>
+            <li>Reach 50 or more paper trades.</li>
+            <li>Measure win rate, average R (profit or loss in units of what you risked) and maximum drawdown.</li>
+            <li>During exam season, cut this to 15 minutes of review a day.</li>
+          </ul></div>
+      </div>
+      <p class="gate"><b>Gate before real money:</b> at least 50 paper trades with positive results. Even then, start only with money you could lose completely, and no leverage.</p>
+    </div>
+  </details>
+
+  <details id="d-biz">
+    <summary><h2>Business system</h2><span class="hint">Miswak Mongolia and other stores</span></summary>
+    <div class="dbody">
+      <ul>
+        <li><b>Daily ops, 12:50–13:20:</b> orders, customer messages, stock levels and delivery issues in Mongolia.</li>
+        <li><b>Daily deep work, 20:30–21:30:</b> produce one thing each night: 2 reels, a new ad set, a product page fix, or a supplier call. Mongolia shares your UTC+8 time zone, and buyers are most active in this window.</li>
+        <li><b>Tuesday and Sunday mornings:</b> batch a full week of reels and ad creatives so weeknights stay short.</li>
+        <li><b>Saturday 19:00:</b> review the numbers (sales, ad spend, ROAS, best and worst reel). Turn off losing ads, put more budget behind winners, and choose next week's single focus.</li>
+        <li><b>Get help:</b> if you don't have one yet, hire someone in Ulaanbaatar for packing, delivery and customer-service replies. Your job is content, ads and decisions.</li>
+      </ul>
+      <p class="note">A student visa generally doesn't allow you to work in China. Keep the business run from Mongolia, and don't take Chinese clients or local jobs without checking with the international office first.</p>
+    </div>
+  </details>
+
+  <details id="d-ai">
+    <summary><h2>AI: learn it, then teach it</h2><span class="hint">Mon + Sun 20:00–21:00</span></summary>
+    <div class="dbody">
+      <ul>
+        <li><b>Rhythm:</b> learn on Tuesday night (30 min) and Saturday afternoon (2 h), prepare on Sunday at 17:00, then teach on Sunday and Monday at 20:00. Teaching what you learned that same week is the fastest way to remember it.</li>
+        <li><b>Why it matters for Goal 1:</b> the class pays $200, but what you learn for it can automate your store (content, replies, ads), and that's worth far more.</li>
+        <li><b>What to learn first:</b> the tools you already use to run the business: Claude for writing and research, Claude Code for automation, AI voiceover and video for reels. Real results from your own store make the best class examples.</li>
+        <li><b>Each lesson:</b> one topic, a live demo, one exercise the students do during class, and one piece of homework. Keep it to 60 minutes.</li>
+        <li><b>Link it to school:</b> use your Intro to AI class (人工智能通识导论) on Wednesday for theory and your teaching for practice.</li>
+      </ul>
+      <p class="note">This is paid work. In China a student needs the university's approval and a part-time work note on the residence permit before taking paid work. Ask the international office.</p>
+    </div>
+  </details>
+
+  <details open id="d-review">
+    <summary><h2>Sunday weekly review</h2><span class="hint">16:00–17:00 · saved on this device</span></summary>
+    <div class="dbody">
+      <div class="checks" id="checks"></div>
+      <div class="row2"><button class="btn" id="reset" type="button">Clear this week's ticks</button><span class="muted mono" id="checks-count"></span></div>
+    </div>
+  </details>
+
+  <section aria-labelledby="tg-h">
+    <div class="sec-head">
+      <span class="eyebrow">Targets</span>
+      <h2 id="tg-h">30 / 60 / 90 days</h2>
+    </div>
+    <div class="targets">
+      <div class="target"><h3>Day 30 · end of October</h3>
+        <ul><li>No missed classes, every homework submitted</li><li>16 of 16 gym sessions</li><li>Babypips basics finished</li><li>Business posting daily and running steadily</li></ul></div>
+      <div class="target"><h3>Day 60 · end of November</h3>
+        <ul><li>Midterms in the top 10% of the class</li><li>One trading strategy chosen, 25 paper trades logged</li><li>Revenue up by a percentage you set, compared with October</li></ul></div>
+      <div class="target"><h3>Day 90 · end of December</h3>
+        <ul><li>Exam-ready: every past paper done</li><li>50 paper trades reviewed</li><li>Lifts measurably stronger than in October</li><li>Packing and customer service run without you</li></ul></div>
+    </div>
+  </section>
+
+  <details id="d-prompt">
+    <summary><h2>The improved prompt</h2><span class="hint">reuse in Claude or ChatGPT</span></summary>
+    <div class="dbody">
+      <p class="muted">Paste this into Claude or ChatGPT with your timetable screenshot attached, for example to rebuild the plan next semester.</p>
+      <pre id="prompt">You are a performance coach for international university students who also run businesses.
+
+&lt;me&gt;
+- International freshman in Nanjing, China, first semester (2026–27 fall). One month in.
+- I run an e-commerce business selling to Mongolia (Miswak Mongolia + other products). Mongolia is the same time zone (UTC+8).
+- Goals by Sep 2027: $10,000/month profit, GPA 3.7+/4.0, strong + lean (bench 1x, squat 1.5x, deadlift 2x bodyweight, visible abs).
+- Priorities: 1) top GPA, 2) grow the business every day, 3) gym 4x/week,
+  4) learn trading from zero (market not chosen yet), 5) run on the track 1–2x/week,
+  6) study AI and teach an AI class every Monday and Sunday at 20:00.
+- My class timetable is attached (periods: 1=08:00 … 5=11:30–12:15, 6=14:00 … 10=17:30–18:15, 11–12 evening).
+&lt;/me&gt;
+
+&lt;task&gt;
+Build my weekly operating system:
+1. A time-blocked schedule for Mon–Sun (06:30–23:30) built around my fixed classes, with sleep, meals, gym, runs, self-study, business, trading, AI study and AI teaching blocks.
+2. A GPA strategy for each course (hardest ones first) and an exam-season mode.
+3. A 90-day trading learning roadmap (paper trading first, risk rules, what to study each month).
+4. A daily and weekly business routine (ops, content, ads, review).
+5. A Sunday weekly-review checklist and 30/60/90-day measurable targets.
+&lt;/task&gt;
+
+&lt;constraints&gt;
+- MUST be realistic: at least 7.5h of sleep, one light evening per week, no block over 90 min without a break.
+- MUST respect legal limits for a foreign student in China (visa, trading restrictions).
+- No generic motivation. Every block must say exactly what I do in it.
+&lt;/constraints&gt;
+
+&lt;output_format&gt;
+Weekly table first, then sections 2–5 as short bullet lists. Plain English.
+&lt;/output_format&gt;</pre>
+      <button class="btn" id="copy" type="button">Copy prompt</button>
+    </div>
+  </details>
+</div>
+
+<script>
+(function(){
+  const CAT = {
+    class:{label:"Class"}, study:{label:"Self-study"}, biz:{label:"Business"}, trade:{label:"Trading"}, ai:{label:"AI study + teaching"},
+    gym:{label:"Gym"}, run:{label:"Track run"}, meal:{label:"Meal"}, rest:{label:"Rest / free"}
+  };
+  // [start, end, category, title, detail]; class blocks also carry the Chinese course name at index 5
+  const common = {
+    wake:["06:45","07:00","rest","Wake up","Water, make the bed. No phone until 07:30."],
+    bf:["07:00","07:30","meal","Breakfast","Protein first: eggs, soy milk, baozi."],
+    lunch:["12:15","12:50","meal","Lunch",""],
+    ops:["12:50","13:20","biz","Business ops","Orders, DMs, stock, courier, yesterday's ad numbers."],
+    nap:["13:20","13:50","rest","Nap / rest","20 minutes max."],
+    dinner:["18:00","18:45","meal","Dinner",""],
+    ds2:["19:00","20:15","study","Deep study 2","Today's homework, done today. Go to the library, not your dorm."],
+    deep:["20:30","21:30","biz","Business deep work","One output: 2 reels, a new ad set, a page fix or a supplier call."],
+    trade:["21:30","22:15","trade","Trading study","Lesson + chart practice. Journal every paper trade."],
+    wind:["22:15","22:45","rest","Wind down","Write tomorrow's top 3 tasks, shower, stretch."],
+    sleep:["23:00","23:30","rest","Sleep","Lights out 23:00 → 06:45."]
+  };
+  const c = k => common[k];
+  const DAYS = [
+    {k:"Mon", note:"Chinese in the morning, Survey of China in the afternoon, gym after class, AI class at 20:00.", blocks:[
+      c("wake"),c("bf"),
+      ["07:30","09:30","study","Deep study 1","Math problem set, then 20 min Anki + preview today's Integrated Chinese lesson."],
+      ["09:50","12:15","class","Integrated Chinese I","Periods 3–5 · 教七-105","汉语综合I"],
+      c("lunch"),c("ops"),c("nap"),
+      ["14:00","16:35","class","Survey of China","Periods 6–8 · 教七-108","中国概况（英本班）"],
+      ["16:50","18:00","gym","Gym · Upper A","Push + pull: bench, rows, overhead press, pull-ups."],
+      c("dinner"),
+      ["19:00","19:50","study","Deep study 2","Today's Chinese and Survey of China homework, done today."],
+      ["20:00","21:00","ai","Teach AI class","Lesson 1 of the week. Prepared on Sunday at 17:00."],
+      ["21:00","21:30","biz","Business: replies","Short one tonight. Orders and messages only."],
+      c("trade"),c("wind"),c("sleep")]},
+    {k:"Tue", note:"Your biggest free block. Use the morning to run the business and train legs.", blocks:[
+      c("wake"),c("bf"),
+      ["07:30","09:30","study","Deep study 1","Math review + Chinese Anki and reading."],
+      ["09:30","12:00","biz","Business batch","Make the week's reels and ad creatives, plan offers, contact suppliers."],
+      ["12:00","13:00","meal","Lunch",""],
+      ["13:00","14:15","gym","Gym · Lower A","Squat, Romanian deadlift, lunges, core."],
+      ["14:30","15:30","study","Management reading","Read this week's chapter and write a 1-page summary."],
+      ["15:50","18:15","class","Management (English-taught)","Periods 8–10 · 教二-501","管理学（全英文）"],
+      ["18:20","19:00","meal","Dinner",""],
+      ["19:15","20:15","study","Homework","Management + any math due."],
+      ["20:30","21:00","biz","Business: replies","Short one; the morning covered the deep work."],
+      ["21:00","21:30","ai","AI study","Try one new AI tool or feature and note it for Sunday's lesson."],
+      c("trade"),c("wind"),c("sleep")]},
+    {k:"Wed", note:"Chinese Reading and Intro to AI, then an easy track run.", blocks:[
+      c("wake"),c("bf"),
+      ["07:30","09:30","study","Deep study 1","Math problems, then preview the Chinese Reading text."],
+      ["09:50","12:15","class","Chinese Reading I","Periods 3–5 · 兰三-104","汉语阅读I"],
+      c("lunch"),c("ops"),c("nap"),
+      ["14:00","15:35","class","Intro to AI","Periods 6–7 · 教一-203","人工智能通识导论（英本班）"],
+      ["16:00","16:45","run","Track run · easy","4–5 km at a pace where you can still talk."],
+      ["17:00","18:00","study","Study","AI assignment or extra math."],
+      c("dinner"),c("ds2"),c("deep"),c("trade"),c("wind"),c("sleep")]},
+    {k:"Thu", note:"Math and Chinese Listening, then the second upper-body session.", blocks:[
+      c("wake"),c("bf"),
+      ["07:30","09:30","study","Deep study 1","Preview today's math section + Anki."],
+      ["09:50","12:15","class","Advanced Math I","Periods 3–5 · 教三-205","高等数学I(国际班)"],
+      c("lunch"),c("ops"),c("nap"),
+      ["14:00","16:35","class","Chinese Listening I","Periods 6–8 · 教七-203","汉语听力I"],
+      ["16:50","18:00","gym","Gym · Upper B","Incline press, pull-downs, dips, arms."],
+      c("dinner"),
+      ["19:00","20:15","study","Deep study 2","Today's math homework, done today."],
+      c("deep"),c("trade"),c("wind"),c("sleep")]},
+    {k:"Fri", note:"Math, tennis, the weekly mistake review, then a free evening.", blocks:[
+      c("wake"),c("bf"),
+      ["07:30","09:30","study","Deep study 1","Finish Thursday's math homework + Anki."],
+      ["09:50","12:15","class","Advanced Math I","Periods 3–5 · 教三-205","高等数学I(国际班)"],
+      c("lunch"),c("ops"),c("nap"),
+      ["14:00","15:35","class","PE: Tennis","Periods 6–7 · 梅园网球场. This counts as training.","体育I"],
+      ["16:00","17:30","study","Weekly math set","Redo every mistake from the week's mistake notebook."],
+      ["18:00","18:45","meal","Dinner",""],
+      ["19:00","22:00","rest","Free evening","Friends, explore Nanjing, call family."],
+      ["22:00","22:15","trade","Trading: weekly review","15 minutes. Read back this week's journal."],
+      c("wind"),c("sleep")]},
+    {k:"Sat", note:"Legs in the morning, the weekly study session, then the afternoon off.", blocks:[
+      ["07:00","07:30","meal","Wake + breakfast","Weekends: at most 30–60 min later than weekdays."],
+      ["08:00","09:15","gym","Gym · Lower B","Deadlift, leg press, hamstring curls, calves."],
+      ["09:30","12:00","study","Weekly study session","Preview next week's math, Chinese vocab, HSK practice."],
+      ["12:00","13:00","meal","Lunch",""],
+      ["13:00","15:00","ai","AI study","Take one course module or build one real project you can show in class."],
+      ["15:00","18:00","rest","Free afternoon","City, friends, rest. No work."],
+      ["18:00","18:45","meal","Dinner",""],
+      ["19:00","20:30","biz","Business numbers review","Sales, ad spend, ROAS, best and worst reel. Choose next week's focus."],
+      ["21:00","21:45","trade","Trading study","Lesson + backtesting on TradingView."],
+      ["22:15","22:45","rest","Wind down",""],c("sleep")]},
+    {k:"Sun", note:"Intervals, content batch, weekly review, lesson prep, AI class at 20:00.", blocks:[
+      ["07:15","07:30","rest","Wake up",""],
+      ["07:30","08:15","run","Track run · intervals","6×400 m, or an easy run if your legs are tired. Optional."],
+      ["08:15","09:00","meal","Breakfast",""],
+      ["09:00","11:30","biz","Business content batch","Film and edit next week's reels."],
+      ["12:00","13:00","meal","Lunch",""],
+      ["13:00","16:00","rest","Rest",""],
+      ["16:00","17:00","study","Weekly review","Tick the checklist below and set next week's top 3 goals."],
+      ["17:00","18:00","ai","Prepare AI lessons","Slides, live demo and one exercise for tonight and Monday."],
+      ["18:00","18:45","meal","Dinner",""],
+      ["19:00","19:50","study","Monday preview","Preview Monday's Integrated Chinese lesson + Anki."],
+      ["20:00","21:00","ai","Teach AI class","Lesson 2 of the week."],
+      ["21:00","21:45","trade","Trading: week prep","Mark key levels for the week ahead."],
+      ["22:15","22:45","rest","Wind down","Early night."],c("sleep")]}
+  ];
+
+  const toMin = s => { const [h,m]=s.split(":").map(Number); return h*60+m; };
+  const GOAL = {class:"GPA", study:"GPA", biz:"Money", ai:"Money", trade:"Money", gym:"Body", run:"Body"};
+  const fmtH = m => { const h=m/60; return (h%1===0?h:h.toFixed(1))+"h"; };
+  const esc = s => String(s).replace(/[&<>"]/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
+
+  // Dates: Week 1 starts Mon 2026-09-21
+  const start = new Date(2026,8,21);
+  const now = new Date();
+  const todayIdx = (now.getDay()+6)%7; // Mon=0
+  const dayMs = 86400000;
+  const midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const weekNo = Math.floor((midnight - start)/dayMs/7)+1;
+  const monday = new Date(midnight.getTime() - todayIdx*dayMs);
+  const dates = DAYS.map((_,i)=>{ const d=new Date(monday.getTime()+i*dayMs); return (d.getMonth()+1)+"."+d.getDate(); });
+  document.getElementById("today-label").textContent = DAYS[todayIdx].k + " " + dates[todayIdx];
+  document.getElementById("week-label").textContent = weekNo>=1 ? ("Week "+weekNo) : "Before semester";
+
+  // legend
+  document.getElementById("legend").innerHTML = Object.entries(CAT).map(([k,v]) =>
+    `<span><i class="sw c-${k}"></i>${v.label}</span>`).join("");
+
+  // tabs + day view
+  const tabsEl = document.getElementById("tabs"), dayEl = document.getElementById("day");
+  let sel = todayIdx;
+  function renderTabs(){
+    tabsEl.innerHTML = DAYS.map((d,i)=>`<button class="tab" role="tab" id="tab-${i}" aria-selected="${i===sel}" data-i="${i}">${d.k}<small>${dates[i]}</small></button>`).join("");
+  }
+  function renderDay(){
+    const d = DAYS[sel];
+    const nowMin = now.getHours()*60+now.getMinutes();
+    const gm = {}; d.blocks.forEach(b=>{ const g=GOAL[b[2]]; if(g && b[3]!=="Sleep") gm[g]=(gm[g]||0)+toMin(b[1])-toMin(b[0]); });
+    let html = `<div class="day-note">${esc(d.note)}</div><div class="today-goals">` +
+      [["Money","c-biz"],["GPA","c-class"],["Body","c-gym"]].map(([g,cl])=>`<span class="tg ${cl}">${g} <b>${fmtH(gm[g]||0)}</b></span>`).join("") + `</div>`;
+    d.blocks.forEach(b=>{
+      const isNow = sel===todayIdx && nowMin>=toMin(b[0]) && nowMin<toMin(b[1]);
+      const time = b[3]==="Sleep" ? b[0] : `${b[0]}–${b[1]}`;
+      const zh = b[5] ? `<span class="zh">${esc(b[5])}</span>` : "";
+      html += `<div class="row${isNow?" now":""}"><div class="t">${time}</div><div class="blk c-${b[2]}"><span class="ti">${esc(b[3])}${zh}${GOAL[b[2]]?`<span class="gtag">${GOAL[b[2]]}</span>`:""}${isNow?'<span class="nowtag">NOW</span>':""}</span>${b[4]?`<span class="de">${esc(b[4])}</span>`:""}</div></div>`;
+    });
+    dayEl.innerHTML = html;
+  }
+  tabsEl.addEventListener("click", e=>{
+    const t = e.target.closest(".tab"); if(!t) return;
+    sel = +t.dataset.i;
+    renderTabs(); renderDay();
+  });
+  renderTabs(); renderDay();
+
+  // week grid
+  const G0 = toMin("06:30"), G1 = toMin("23:30"), PX = 0.9; // px per minute
+  const H = (G1-G0)*PX;
+  const weekEl = document.getElementById("week");
+  let wh = `<div></div>` + DAYS.map((d,i)=>`<div class="wk-head">${d.k}<small>${dates[i]}</small></div>`).join("");
+  let times = `<div class="wk-times" style="height:${H}px">`;
+  for(let m=toMin("07:00"); m<=toMin("23:00"); m+=60){ times += `<span style="top:${(m-G0)*PX}px">${String(m/60).padStart(2,"0")}:00</span>`; }
+  times += `</div>`;
+  wh += times;
+  DAYS.forEach((d,i)=>{
+    let col = `<div class="wk-col" style="height:${H}px">`;
+    for(let m=toMin("07:00"); m<=toMin("23:00"); m+=60){ col += `<div class="wk-line" style="top:${(m-G0)*PX}px"></div>`; }
+    d.blocks.forEach(b=>{
+      if(b[3]==="Sleep") return;
+      const s=Math.max(toMin(b[0]),G0), e=Math.min(toMin(b[1]),G1);
+      const h=(e-s)*PX;
+      const label = h>=18 ? esc(b[3].split(" · ")[0]) + (b[5] && h>=40 ? `<span class="zh">${esc(b[5])}</span>` : "") : "";
+      col += `<div class="wb c-${b[2]}${i===todayIdx?" today":""}" style="top:${(s-G0)*PX}px;height:${Math.max(h-2,4)}px" title="${esc(b[0]+"–"+b[1]+" "+b[3])}">${label}</div>`;
+    });
+    col += `</div>`;
+    wh += col;
+  });
+  weekEl.innerHTML = wh;
+
+  // budget
+  const tot = {};
+  DAYS.forEach(d=>d.blocks.forEach(b=>{ if(b[3]==="Sleep") return; tot[b[2]]=(tot[b[2]]||0)+(toMin(b[1])-toMin(b[0])); }));
+  const order = ["class","study","biz","trade","ai","gym","run"];
+  document.getElementById("budget").innerHTML = order.map(k=>{
+    const h = (tot[k]||0)/60;
+    return `<div class="bud"><span class="n">${h%1===0?h:h.toFixed(1)}h</span><span class="l"><i class="sw c-${k}"></i>${CAT[k].label}</span></div>`;
+  }).join("") + `<div class="bud"><span class="n">7.75h</span><span class="l"><i class="sw c-rest"></i>Sleep per night</span></div>`;
+
+  // goal cards: weekly hours + next checkpoint
+  ["biz","ai","trade","class","study","gym","run"].forEach(k=>{ const el=document.getElementById("h-"+k); if(el) el.textContent = fmtH(tot[k]||0); });
+  document.querySelectorAll(".ladder").forEach(ol=>{
+    let marked=false;
+    ol.querySelectorAll("li").forEach(li=>{
+      const dt = new Date(li.dataset.date+"T23:59:59");
+      if(dt < now){ li.classList.add("past"); }
+      else if(!marked){ marked=true; li.classList.add("next");
+        const days = Math.ceil((dt-now)/dayMs);
+        li.querySelector(".d").insertAdjacentHTML("beforeend", `<br><span class="countdown">${days} days</span>`); }
+    });
+  });
+
+  // money calculator (inputs remembered on this device only)
+  const CK = "nsp-calc-v2";
+  const ids = ["c-goal","c-teach","c-ppo","c-now","c-growth"];
+  try { const saved = JSON.parse(localStorage.getItem(CK)||"{}"); ids.forEach(id=>{ if(saved[id]!==undefined && saved[id]!=="") document.getElementById(id).value = saved[id]; }); } catch(e){}
+  const money = n => "$" + Math.round(n).toLocaleString("en-US");
+  const num = id => parseFloat(document.getElementById(id).value);
+  function calc(){
+    const goal=num("c-goal")||0, teach=Math.min(num("c-teach")||0, goal), ppo=num("c-ppo")||0, nowD=num("c-now"), g=(num("c-growth")||0)/100;
+    const ecom = Math.max(goal-teach,0);
+    const perDay = ppo>0 ? ecom/ppo/30 : 0;
+    let rows = `<div class="outrow"><span>E-commerce must earn</span><span class="v">${money(ecom)}/mo</span></div>`;
+    rows += `<div class="outrow key"><span>Orders needed</span><span class="v">${perDay>0?Math.ceil(perDay):"—"} / day</span></div>`;
+    rows += `<div class="outrow"><span>Orders needed per month</span><span class="v">${ppo>0?Math.ceil(ecom/ppo).toLocaleString("en-US"):"—"}</span></div>`;
+    if(ppo>0){ const up = ecom/(ppo+2)/30; rows += `<div class="outrow"><span>If bundles add $2 profit per order</span><span class="v">${Math.ceil(up)} / day</span></div>`; }
+    if(nowD>0 && perDay>0){
+      const x = perDay/nowD;
+      rows += `<div class="outrow"><span>Compared with your orders today</span><span class="v">${x.toFixed(1)}×</span></div>`;
+      if(x<=1){ rows += `<p class="muted">You already have the order volume. Raise profit per order next.</p>`; }
+      else if(g>0){ const m = Math.ceil(Math.log(x)/Math.log(1+g)); const d=new Date(now.getFullYear(), now.getMonth()+m, 1);
+        rows += `<div class="outrow"><span>Months at ${Math.round(g*100)}% growth</span><span class="v">${m} → ${d.toLocaleString("en-US",{month:"short",year:"numeric"})}</span></div>`; }
+    } else {
+      rows += `<p class="muted">Enter "Orders per day now" to see how far you are from the goal and when you'd reach it.</p>`;
+    }
+    document.getElementById("calc-out").innerHTML = rows;
+  }
+  ids.forEach(id=>document.getElementById(id).addEventListener("input", ()=>{
+    calc();
+    try { const o={}; ids.forEach(i=>o[i]=document.getElementById(i).value); localStorage.setItem(CK, JSON.stringify(o)); } catch(e){}
+  }));
+  calc();
+
+  // weekly review checklist
+  const CHECKS = [
+    ["GPA","No homework missing"],["GPA","Math mistake notebook updated"],["GPA","Self-study hours at or above class hours"],
+    ["Body","4 of 4 gym sessions done"],["Body","2 track runs done"],["Body","Body weight and main lifts logged"],
+    ["Business","Revenue, orders, ad spend and ROAS written down"],["Business","Best reel identified and a variation planned"],["Business","One thing to fix next week chosen"],
+    ["Trading","Journal reviewed and one lesson written"],["Trading","Paper trade count updated"],
+    ["AI","2 of 2 AI classes taught"],["AI","Next week's lesson topic chosen"],
+    ["Scoreboard","This month's profit so far vs the next Money checkpoint"],["Scoreboard","Weight, waist and main lifts vs the next Body checkpoint"],
+    ["Next week","Exams and deadlines on the calendar"],["Next week","Top 3 goals written"]
+  ];
+  const key = "nsp-review-w"+weekNo;
+  let state = {};
+  try { state = JSON.parse(localStorage.getItem(key)||"{}") || {}; } catch(e){ state = {}; }
+  const checksEl = document.getElementById("checks"), countEl = document.getElementById("checks-count");
+  function renderChecks(){
+    let g="", html="";
+    CHECKS.forEach(([grp,txt],i)=>{
+      if(grp!==g){ html += `<div class="cgroup">${esc(grp)}</div>`; g=grp; }
+      const on = !!state[i];
+      html += `<label class="check${on?" done":""}" for="ck-${i}"><input type="checkbox" id="ck-${i}" data-i="${i}"${on?" checked":""}><span>${esc(txt)}</span></label>`;
+    });
+    checksEl.innerHTML = html;
+    const n = CHECKS.filter((_,i)=>state[i]).length;
+    countEl.textContent = `${n} / ${CHECKS.length} done · week ${weekNo}`;
+  }
+  checksEl.addEventListener("change", e=>{
+    const i = e.target.dataset.i; if(i===undefined) return;
+    state[i] = e.target.checked;
+    try{ localStorage.setItem(key, JSON.stringify(state)); }catch(err){}
+    renderChecks();
+  });
+  document.getElementById("reset").addEventListener("click", ()=>{
+    state = {}; try{ localStorage.removeItem(key); }catch(err){} renderChecks();
+  });
+  renderChecks();
+
+  // copy prompt
+  const copyBtn = document.getElementById("copy");
+  copyBtn.addEventListener("click", ()=>{
+    const text = document.getElementById("prompt").textContent;
+    const done = ()=>{ copyBtn.textContent = "Copied"; setTimeout(()=>copyBtn.textContent="Copy prompt", 1800); };
+    const fallback = ()=>{ const r=document.createRange(); r.selectNodeContents(document.getElementById("prompt")); const s=getSelection(); s.removeAllRanges(); s.addRange(r); copyBtn.textContent="Selected, press Ctrl+C"; };
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch(e){ fallback(); }
+  });
+})();
+</script>
+
+</body>
+</html>
